@@ -1,0 +1,18 @@
+npx create-strapi-app@latest server
+
+
+stapi email fake@fake.com Passme@12345
+
+-----------------------------------------
+FRONT-END
+npx create-react-app client
+npm i @mui/material @emotion/react @emotion/styled @mui/icons-material 
+react-router-dom@6 
+react-redux @reduxjs/toolkit
+formik yup
+dotenv
+react-responsive-carousel
+
+
+*// remove extra stuff, import google fonts and past in index.css, some global css in index.css file 
+*// install vs code extension Tailwindd Shades by Omar Bourhaota BUTTON ctrl+K ctrl+g
