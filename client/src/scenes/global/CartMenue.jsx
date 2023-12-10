@@ -86,6 +86,7 @@ const CartMenue = () => {
                                         <Typography>
                                             {item.attributes.shortDescription}
                                         </Typography>
+                                        
                                     </Box>
                                 </FlexBox>
                             </Box>
