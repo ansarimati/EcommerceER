@@ -1,8 +1,12 @@
 import React from 'react';
+import TempCarousel from './TempCarousel';
+
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div className='home'>
+      <TempCarousel />
+    </div>
   )
 }
 
