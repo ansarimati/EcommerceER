@@ -16,3 +16,6 @@ react-responsive-carousel
 
 *// remove extra stuff, import google fonts and past in index.css, some global css in index.css file 
 *// install vs code extension Tailwindd Shades by Omar Bourhaota BUTTON ctrl+K ctrl+g
+
+
+/ Turbo console by chakron Anas vs code extension
