@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { IconButton, Box, Typography, useTheme, Button } from "@mui/material";
-import AddIcon from "@mui/icons-material";
-import RemoveIcon from "@mui/icons-material";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
 import { shades } from "../theme";
 import { addToCart, decreaseCount, increaseCount } from "../state";
 import { useNavigate } from "react-router-dom";
@@ -20,7 +20,7 @@ const Item = ({ item, width }) => {
   const {
     data: {
       attributes: {
-        formates: {
+        formats: {
           medium: { url },
         },
       },

@@ -1,5 +1,7 @@
 npx create-strapi-app@latest server
 
+npm run develop // TO RUN THE STRAPI BACKEND
+
 
 stapi email fake@fake.com Passme@12345
 

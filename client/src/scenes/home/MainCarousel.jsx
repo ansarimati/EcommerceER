@@ -64,7 +64,7 @@ const MainCarousel = () => {
                     padding="20px"
                     borderRight="1px"
                     textAlign="left"
-                    bgcolor="rgba(0, 0, 0, 0.4)"
+                    // bgcolor="rgba(0, 0, 0, 0.4)"
                     position="absolute"
                     top="46%"
                     left={isNonMobile ? "10%" : "0"}
