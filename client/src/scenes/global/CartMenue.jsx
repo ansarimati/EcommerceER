@@ -102,7 +102,7 @@ const CartMenue = () => {
                                                     <RemoveIcon />
                                                 </IconButton>
                                                 <Typography>{item.count}</Typography>
-                                                <IconButton onClick={() => increaseCount({ id: item.id })}>
+                                                <IconButton onClick={() => dispatch(increaseCount({ id: item.id }))}>
                                                     <AddIcon />
                                                 </IconButton>
                                             </Box>

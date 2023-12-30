@@ -10,6 +10,7 @@ const Home = () => {
       <TempCarousel />
       <ShoppingList />
       <Subscribe />
+      
     </div>
   )
 }
