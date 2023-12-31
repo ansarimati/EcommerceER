@@ -9,8 +9,6 @@ import { Footer } from "./scenes/global/Footer";
 import TempItemDetails from "./scenes/itemDetails/TempItemDetails";
 
 
-
-
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
@@ -32,7 +30,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="item/:itemId" element={<TempItemDetails />} />
-          <Route path="/chekout" element={<Checkout />} />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="/checkout/success" element={<Confirmation />} />
         </Routes>
         <CartMenue />

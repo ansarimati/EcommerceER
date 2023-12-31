@@ -8,7 +8,7 @@ const ShoppingList = () => {
     const dispatch = useDispatch();
     const [value, setValue] = useState("all");
     const items = useSelector((state) => state.cart.items);
-    console.log("items", items);
+    // console.log("items", items);
     const isNonMobile = useMediaQuery("(min-width: 600px)");
     
 
@@ -23,7 +23,7 @@ const ShoppingList = () => {
       );
 
       const itemsJson = await items.json();
-      console.log("itemjson", itemsJson)
+      // console.log("itemjson", itemsJson);
       dispatch(setItem(itemsJson.data));
     }
 
@@ -43,8 +43,8 @@ const ShoppingList = () => {
       (item) => item.attributes.category === "bestSellers" 
     );
     
-    console.log("items", items);
-    console.log("best", bestSellers);
+    // console.log("items", items);
+    // console.log("best", bestSellers);
   return (
     <Box width="80%" margin="80px auto">
       <Typography variant='h3' textAlign="center">

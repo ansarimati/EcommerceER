@@ -9,15 +9,27 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { shades } from "../../theme";
 import { addToCart } from "../../state";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const TempItemDetails = () => {
   const dispatch = useDispatch();
+  const naviagte = useNavigate();
+
   const { itemId } = useParams();
   const [value, setValue] = useState("description");
   const [count, setCount] = useState(1);
   const [item, setItem] = useState(null);
   const [items, setItems] = useState([]);
+ 
+
+  const cart = useSelector((state) => state.cart.cart);
+  // console.log("cartItem", cart);
+  const findCart = cart.filter((item) => item.id === Number(itemId));
+  const isItemPresentInCart = findCart.length > 0;
+  // console.log(isItemPresentInCart);
+
+
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -95,18 +107,33 @@ const TempItemDetails = () => {
                 <AddIcon />
               </IconButton>
             </Box>
-            <Button
-              sx={{
-                backgroundColor: "#222222",
-                color: "white",
-                borderRadius: 0,
-                minWidth: "150px",
-                padding: "10px 40px",
-              }}
-              onClick={() => dispatch(addToCart({ item: { ...item, count } }))}
-            >
-              ADD TO CART
-            </Button>
+            {
+              isItemPresentInCart ? (<Button
+                sx={{
+                  backgroundColor: "#222222",
+                  color: "white",
+                  borderRadius: 0,
+                  minWidth: "150px",
+                  padding: "10px 40px",
+                }}
+                onClick={() => naviagte("/checkout")}
+              >
+                PROCEED TO CHECKOUT
+              </Button>) : 
+              (<Button
+                sx={{
+                  backgroundColor: "#222222",
+                  color: "white",
+                  borderRadius: 0,
+                  minWidth: "150px",
+                  padding: "10px 40px",
+                }}
+                onClick={() => (dispatch(addToCart({ item: { ...item, count } })))}
+              >
+                ADD TO CART
+              </Button>)
+            }
+            
           </Box>
           <Box>
             <Box m="20px 0 5px 0" display="flex">
