@@ -1,6 +1,6 @@
 // 'use strict';
 
-// const stripe = require("stripe")("sk_test_51OTSwrSG323pqoN93QIjSx6kzw91ANEAN58BdX25xhw6VPp4Aw9a8U1GRVRNhlzF8uvhpuKa7AdNmL6WQ7vS6NFS00N5QGGtR5");
+// const stripe = require("stripe")("");
 
 
 
